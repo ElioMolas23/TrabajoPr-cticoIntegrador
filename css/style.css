@@ -4,19 +4,28 @@
   box-sizing: border-box;/* propiedad para que el borde de las cajas se aplique contenidas */
   margin: 0;/* no deja espacio entre el bborde de la pagina y el contenido de la misma */
   padding: 0;
+  animation-name: left-to-right;
+  animation-duration: 2s;
 }
-main{
-  padding: 0px 350px ;
-  /* background-color: pink; */
+@keyframes left-to-right{ /* ANIMACION */
+  0%{
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
 }
 
 nav {
   background-color: #f2f2f2; /* color de fondo */
-  height: 60px; /* altura del nav */
+  height: 7vh; /* altura del nav */
   display: flex; /* flexbox para los elementos de lista */
   justify-content: space-between; /* espacio entre los elementos */
   align-items: center; /* centrar verticalmente */
-  padding: 0 20px; /* padding horizontal */
+  padding: 0 2vw; /* padding horizontal */
 }
 
 nav ul {
@@ -40,34 +49,42 @@ nav a:hover {
   background-color: #333; /* cambio de color de fondo al pasar el mouse */
 }
 
+
+
 .descripcion{
   display: flex;
-  height: 500px;
+  height: 60vh;
   margin: 50px 0px;
+  padding: 0 20%
+}
+.text{
+  width: 40%;
+}
+.descripcion img {
+  max-width: 60%;
+  height: auto;
 }
 
 .feature {
   padding: 10px;
   font-size: 50px;
-  margin-bottom: 40px;
-  margin-top: 40px;
 }
 
 .slogan{
   font-size: 20px;
 }
 
-
 .precio{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.tiposPrecios{
-  display: flex;
+  
   align-items: center;
   justify-content: space-between;
+  padding: 0 20%;
+}
+.tipo-de-precios{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .prom{
@@ -79,6 +96,50 @@ nav a:hover {
   background-color: aquamarine;
   border-radius: 10px;
 }
+
+.turno{
+  background-color: rgb(231, 162, 223);
+  padding: 0 20% 2em;
+}
+.turno h2{
+  display: flex;
+  justify-content: center;
+}
+ .turno form {
+  padding: 0 10%;
+  border: 2px solid black;
+  border-radius: 5%;
+  margin-top: 2em;
+}
+
+ fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+ label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+ input[type="text"], input[type="email"],input[type="date"] ,select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+ button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
 
 footer {
   background-color: #333;

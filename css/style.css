@@ -4,6 +4,7 @@
   box-sizing: border-box;/* propiedad para que el borde de las cajas se aplique contenidas */
   margin: 0;/* no deja espacio entre el bborde de la pagina y el contenido de la misma */
   padding: 0;
+  scroll-behavior: smooth;/* desplaza mejor el scroll */
   animation-name: left-to-right;
   animation-duration: 2s;
 }
@@ -19,13 +20,17 @@
 
 }
 
+
+
 nav {
-  background-color: #f2f2f2; /* color de fondo */
+  background-color:rgb(231, 162, 223) ; /* color de fondo */
   height: 7vh; /* altura del nav */
   display: flex; /* flexbox para los elementos de lista */
   justify-content: space-between; /* espacio entre los elementos */
   align-items: center; /* centrar verticalmente */
-  padding: 0 2vw; /* padding horizontal */
+  padding: 0 25vw; /* padding horizontal */
+  width: 100%;
+  
 }
 
 nav ul {
@@ -51,27 +56,50 @@ nav a:hover {
 
 
 
-.descripcion{
+.inicio{
+  background-image: url(../img/cute-dog-spitz-at-groomer-salon-1-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.opacidad-imagen{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  height: 60vh;
-  margin: 50px 0px;
-  padding: 0 20%
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 .text{
-  width: 40%;
-}
-.descripcion img {
-  max-width: 60%;
-  height: auto;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.feature {
-  padding: 10px;
-  font-size: 50px;
+.text h2{
+  font-size: 4vw;
+  color: white;
 }
-
-.slogan{
-  font-size: 20px;
+.text p{
+  font-size: 2vw;
+  color: white;
+}
+.btn{
+  display: inline-block;
+  background-color: rgb(231, 162, 223);
+  color: black;
+  padding: 1vw;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.btn:hover {
+  color: #fff; /* cambio de color al pasar el mouse */
+  background-color: #333; /* cambio de color de fondo al pasar el mouse */
 }
 
 .precio{
@@ -99,17 +127,14 @@ nav a:hover {
 
 .turno{
   background-color: rgb(231, 162, 223);
-  padding: 0 20% 2em;
+  padding: 2em 25% 2em;
+  
 }
-.turno h2{
-  display: flex;
-  justify-content: center;
-}
+
  .turno form {
-  padding: 0 10%;
+  padding: 0 20%;
   border: 2px solid black;
   border-radius: 5%;
-  margin-top: 2em;
 }
 
  fieldset {

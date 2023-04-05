@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ambar´s PetSalon</title>
   <link rel="stylesheet" href="./css/style.css">
  </head>
   <body>
     <header>
-      <nav>
-        <h1>Ambar´s PetSalon</h1>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#precios">Precios</a></li>
-          <li><a href="#turno">Reserva</a></li>
-          <li><a href="#preguntas">Dudas</a></li>
-        </ul>
+      <h1>Ambar´s PetSalon</h1>
+      <button class="menu-btn">
+        <img src="./img/list.svg" alt="menu hamburguesa">
+      </button>
+      <nav class="menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#Servicios">Servicios</a>
+          <a href="#turno">Reserva</a>
+          <a href="#preguntas">Dudas</a>
       </nav>
     </header>
     <main>
@@ -30,41 +31,40 @@
           </div>
         </div>
       </section>
-      <section class="precio" id="precios">
-        <h2>Precios</h2>
+      <section class="servicios" id="Servicios">
+        <h2>Servicios</h2>
+        <p>En Ambar´s no solo nos dedicamos a los tratamientos esteticos, si no, que creemos en la educacion y entrenamiento canino</p>
         <div class="tipo-de-precios">
-          <div class="prom">baño</div>
-          <div class="prom">baño+corte</div>
-          <div class="prom">servicio completo</div>
-        </div>
+          <div class="prom">
+            <h3>Basico</h3>
+          </div>
+          <div class="prom">
+            <h3>Estandar</h3>
+          </div>          
+          <div class="prom">
+            <h3>Premiun</h3>
+          </div>
+          <div class="prom">
+            <h3>Entrenamiento</h3>
+          </div>
       </section>
       <section class="turno" id="turno">
-        <form id="formulario" class="formulario">
-          <fieldset>
-            <legend>Paso 1 - Información personal</legend>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="nombreanimal">Nombre Mascota:</label>
-            <input type="text" id="nombreanimal" name="nombreanimal" required>
+        <form id="reserva-form">
+          <h2>Reservar Turno</h2>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          <label for="nombre-mascota">Nombre mascota:</label>
+          <input type="text" id="nombre-mascota" name="nombre-mascota" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required>
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" name="hora" required>
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required>
       
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-      
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="telefono" required>
-          </fieldset>
-      
-          <fieldset>
-            <legend>Paso 2 - Dia y Horario</legend>
-            <label for="fecha">Fecha</label>
-            <input type="date" id="fecha" name="fecha" required>
-          </fieldset>
-      
-          <fieldset>
-            <label>Por favor revise la información proporcionada y presione el botón enviar para completar el proceso.</label>
-            <button type="submit">Enviar</button>
-          </fieldset>
+          <input type="submit" value="Reservar">
         </form>
       </section>
       <section class="Preguntas" id="preguntas">
@@ -74,5 +74,6 @@
   <footer>
     <p>Derechos reservados © 2023</p>
   </footer>
+  <script src="script.js"></script>
   </body>
 </html>

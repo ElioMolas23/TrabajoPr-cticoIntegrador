@@ -5,9 +5,13 @@
   margin: 0;/* no deja espacio entre el bborde de la pagina y el contenido de la misma */
   padding: 0;
   scroll-behavior: smooth;/* desplaza mejor el scroll */
+}
+main{
   animation-name: left-to-right;
   animation-duration: 2s;
+  background-color:rgb(231, 162, 223) ;
 }
+
 @keyframes left-to-right{ /* ANIMACION */
   0%{
     transform: translateX(-500px);
@@ -21,35 +25,36 @@
 }
 
 
-
-nav {
+header{
+  position: fixed;
   background-color:rgb(231, 162, 223) ; /* color de fondo */
-  height: 7vh; /* altura del nav */
-  display: flex; /* flexbox para los elementos de lista */
+  height: 7vh; /* altura de la barra nav */
+  display: flex; /* flexbox para los elementos hijos*/
   justify-content: space-between; /* espacio entre los elementos */
   align-items: center; /* centrar verticalmente */
-  padding: 0 25vw; /* padding horizontal */
-  width: 100%;
-  
+  padding: 0 20vw; /* padding horizontal */
+  width: 100%; /* el fixed rompe el width */
+  box-shadow: 0px 0px 20px rgba(38, 38, 40, 0.7);
+}
+h1{
+  font-size: 23px;
+}
+.menu-btn{
+  display: none;
 }
 
-nav ul {
-  margin: 0; /* eliminar el margen predeterminado de la lista */
-  padding: 0; /* eliminar el padding predeterminado de la lista */
-  display: flex; /* flexbox para los elementos de lista */
-  list-style-type: none; /* quitar los puntos de la lista */
+.menu{
+  display: flex;
   gap: 3vw;
 }
-
-
-nav a {
+.menu a {
   text-decoration: none; /* quitar subrayado en los enlaces */
-  color: #333333; /* color del texto */
+  color:black; /* color del texto */
   font-weight: bold; /* negrita para destacar */
   font-size: 16px; /* tamaño de la fuente */
 }
 
-nav a:hover {
+.menu a:hover {
   color: #fff; /* cambio de color al pasar el mouse */
   background-color: #333; /* cambio de color de fondo al pasar el mouse */
 }
@@ -75,7 +80,7 @@ nav a:hover {
 }
 
 .text{
-  max-width: 40%;
+  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -102,39 +107,45 @@ nav a:hover {
   background-color: #333; /* cambio de color de fondo al pasar el mouse */
 }
 
-.precio{
-  
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20%;
+.servicios{
+  background-color: rgb(231, 162, 223);
+  padding: 7vh 20% ;
+  text-align: center;
 }
+
+.servicios h2{
+  font-size: 3vw;
+}
+
+.servicios p{
+  font-size: 2vw;
+  margin-bottom: 5vh;
+}
+
 .tipo-de-precios{
   display: flex;
-  justify-content: center;
   justify-content: space-between;
-  margin-bottom: 50px;
+
 }
 
 .prom{
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  width: 300px;
-  border: 1px solid black;
-  background-color: aquamarine;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(63, 82, 231, 0.5);
 }
 
 .turno{
   background-color: rgb(231, 162, 223);
-  padding: 2em 25% 2em;
-  
+  padding: 7vh 20%;
 }
 
  .turno form {
-  padding: 0 20%;
+  padding: 0 10%;
   border: 2px solid black;
   border-radius: 5%;
+  text-align: center;
+  
 }
 
  fieldset {
@@ -147,7 +158,7 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
- input[type="text"], input[type="email"],input[type="date"] ,select {
+ input[type="text"], input[type="email"],input[type="date"], input[type="tel"]{
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -155,16 +166,30 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
- button[type="submit"] {
+
+input[type="submit"] {
   background-color: #4CAF50;
-  color: #fff;
-  padding: 10px;
+  color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
 
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.Preguntas{
+  height: 1000px;
+  padding: 7vh 20%;
+}
 
 footer {
   background-color: #333;
@@ -172,4 +197,72 @@ footer {
   padding: 4vh;
   text-align: center;
   margin: 0;
+}
+
+@media (max-width: 950px) {
+  header{
+    padding: 0 10vw;
+  }
+  .menu-btn{
+    display: initial;
+    background-color: rgb(231, 162, 223);
+    border: 0;
+    cursor: pointer;
+  }
+  .menu{
+    position: fixed;
+    top: 7vh;
+    background-color:rgb(231, 162, 223); 
+    left: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    gap: 1px;
+    border: 1px solid black;
+  }
+
+  .menu.activo{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu a{
+    text-align: center;
+    padding: 5px;
+  }
+
+  .text{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text h2{
+    font-size: 23px;
+  }
+  .text p{
+    font-size:  18px;
+  }
+  .servicios{
+    padding: 7vh 10%;
+  }
+  .tipo-de-precios{
+    flex-direction: column;
+  }
+  .prom{
+    width: auto;
+    margin: 10px;
+  }
+
+  .servicios h2{
+    font-size: 23px;
+  }
+  .servicios p{
+    font-size: 18px;
+  }
+
+  .turno{
+    padding: 7vh 10%;
+  }
 }

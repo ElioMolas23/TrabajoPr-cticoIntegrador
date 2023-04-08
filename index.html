@@ -15,8 +15,8 @@
       </button>
       <nav class="menu">
           <a href="#inicio">Inicio</a>
-          <a href="#Servicios">Servicios</a>
-          <a href="#turno">Reserva</a>
+          <a href="#servicios">Servicio</a>
+          <a href="#Contacto">Contacto</a>
           <a href="#preguntas">Dudas</a>
       </nav>
     </header>
@@ -25,47 +25,81 @@
         <div class="opacidad-imagen">
           <div class="text">
             <h2 >Lideres en tratamientos esteticos caninos</h2>
-            <a href="#turno" class="btn">Haz tu reserva ya!</a>
+            <a href="#Contacto" class="btn">Contactanos!</a>
             <p >Asegurate que tu mascota viva una experiencia completa, desde masajes hasta un corte de pelo a la moda. Con Ambar´s PetSalon podes consentir a tu amigo de cuatro patas.
           </p>
           </div>
         </div>
       </section>
-      <section class="servicios" id="Servicios">
+      <section class="servicios" id="servicios">
         <h2>Servicios</h2>
         <p>En Ambar´s no solo nos dedicamos a los tratamientos esteticos, si no, que creemos en la educacion y entrenamiento canino</p>
         <div class="tipo-de-precios">
-          <div class="prom">
-            <h3>Basico</h3>
+          <div class="prom-1">
+            <div class="opacidad-prom">
+              <div class="cont-prom">
+                <h3>Basico</h3>
+                <ul> 
+                  <li>Baño</li>
+                </ul>
+                <p>$1500</p>
+              </div>
+            </div>
           </div>
-          <div class="prom">
-            <h3>Estandar</h3>
+          <div class="prom-2">
+            <div class="opacidad-prom">
+              <div class="cont-prom">
+                <h3>Estandar</h3>
+                <ul> 
+                  <li>Baño</li>
+                  <li>Corte de pelo</li>
+                </ul>
+                <p>$2000</p>
+              </div>
+            </div>
           </div>          
-          <div class="prom">
-            <h3>Premiun</h3>
+          <div class="prom-3">
+            <div class="opacidad-prom">
+              <div class="cont-prom">
+                <h3>Premiun</h3>
+                <ul> 
+                  <li>Baño</li>
+                  <li>Corte de pelo</li>
+                  <li>Corte de uñas</li>
+                  <li>Masaje canino</li>
+                </ul>
+                <p>$2500</p>
+              </div>
+            </div>
           </div>
-          <div class="prom">
-            <h3>Entrenamiento</h3>
+          <div class="prom-4">
+            <div class="opacidad-prom">
+              <div class="cont-prom">
+                <h3>Sesión de entrenamiento</h3>
+                <p>$2000</p>
+              </div>
+            </div>
           </div>
       </section>
-      <section class="turno" id="turno">
-        <form id="reserva-form">
-          <h2>Reservar Turno</h2>
+      <section class="Contacto" id="Contacto">
+        <form class="contacto-form" id="contacto-form">
+          <h2>Contacto</h2>
           <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
-          <label for="nombre-mascota">Nombre mascota:</label>
-          <input type="text" id="nombre-mascota" name="nombre-mascota" required>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" required>
-          <label for="hora">Hora:</label>
-          <input type="time" id="hora" name="hora" required>
-          <label for="fecha">Fecha:</label>
-          <input type="date" id="fecha" name="fecha" required>
-      
-          <input type="submit" value="Reservar">
+          <input type="email" id="email" name="email" placeholder="Ingresa tu mail" required>
+          <label for="comentario">Comentario:</label>
+		      <textarea id="comentario" name="comentario" placeholder="Dejanos tu comentario y el tipo de servivcio que desea, en la brevedad nos comunicaremos con usted" rows="6" required></textarea>
+          <input type="submit" value="Enviar">
         </form>
+        <div class="modal" id="gracias">
+          <div class="contenido-modal">
+            <div class="respuesta-contacto">
+              <h2>Gracias por contactarnos!</h2>
+              <img src="./img/perro.png" alt="icono de perro">
+            </div>
+          </div>
+        </div>
       </section>
       <section class="Preguntas" id="preguntas">
         <h2>Preguntas frecuentes</h2>

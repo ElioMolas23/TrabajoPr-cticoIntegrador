@@ -8,7 +8,7 @@
 }
 main{
   animation-name: left-to-right;
-  animation-duration: 2s;
+  animation-duration: 1s;
   background-color:rgb(231, 162, 223) ;
 }
 
@@ -108,7 +108,6 @@ h1{
 }
 
 .servicios{
-  background-color: rgb(231, 162, 223);
   padding: 7vh 20% ;
   text-align: center;
 }
@@ -128,19 +127,51 @@ h1{
 
 }
 
-.prom{
+.prom-1,.prom-2,.prom-3,.prom-4{
   width: 200px;
   height: 200px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(63, 82, 231, 0.5);
+  color: white;
 }
-
-.turno{
-  background-color: rgb(231, 162, 223);
+.prom-1 {
+  background-image: url(../img/img-baño.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.prom-2 {
+  background-image: url(../img/perro-corte-pelo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.prom-3 {
+  background-image: url(../img/Masajes-para-perros-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.prom-4{
+  background-image: url(../img/entrenamiento-perro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.opacidad-prom{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.Contacto{
   padding: 7vh 20%;
 }
 
- .turno form {
+ .Contacto form {
   padding: 0 10%;
   border: 2px solid black;
   border-radius: 5%;
@@ -148,17 +179,12 @@ h1{
   
 }
 
- fieldset {
-  border: none;
-  margin-bottom: 20px;
-}
-
  label {
   display: block;
   margin-bottom: 10px;
 }
 
- input[type="text"], input[type="email"],input[type="date"], input[type="tel"]{
+ input[type="text"], input[type="email"], textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -179,11 +205,33 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #3e8e41;
 }
-
-.error {
-  color: red;
-  font-size: 14px;
-  margin-bottom: 10px;
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(60, 58, 58, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.respuesta-contacto{
+  background-color: rgb(231, 162, 223);
+  border-radius: 10px;
+  text-align: center;
+}
+.respuesta-contacto img{
+  width: 20vw;
+  height: auto;
 }
 
 .Preguntas{
@@ -250,7 +298,19 @@ footer {
   .tipo-de-precios{
     flex-direction: column;
   }
-  .prom{
+  .prom-1{
+    width: auto;
+    margin: 10px;
+  }
+  .prom-2{
+    width: auto;
+    margin: 10px;
+  }
+  .prom-3{
+    width: auto;
+    margin: 10px;
+  }
+  .prom-4{
     width: auto;
     margin: 10px;
   }
@@ -262,7 +322,7 @@ footer {
     font-size: 18px;
   }
 
-  .turno{
+  .Contacto{
     padding: 7vh 10%;
   }
 }

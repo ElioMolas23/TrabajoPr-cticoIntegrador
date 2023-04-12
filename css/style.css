@@ -56,7 +56,8 @@ h1{
 
 .menu a:hover {
   color: #fff; /* cambio de color al pasar el mouse */
-  background-color: #333; /* cambio de color de fondo al pasar el mouse */
+  background-color: rgb(174, 70, 162) ; /* cambio de color de fondo al pasar el mouse */
+  transition-duration: 1s ;
 }
 
 
@@ -88,10 +89,12 @@ h1{
 .text h2{
   font-size: 4vw;
   color: white;
+  margin-bottom: 10px;
 }
 .text p{
   font-size: 2vw;
   color: white;
+  margin-top: 10px;
 }
 .btn{
   display: inline-block;
@@ -104,7 +107,8 @@ h1{
 }
 .btn:hover {
   color: #fff; /* cambio de color al pasar el mouse */
-  background-color: #333; /* cambio de color de fondo al pasar el mouse */
+  background-color: rgb(174, 70, 162) ; /* cambio de color de fondo al pasar el mouse */
+  transition-duration: 1s ;
 }
 
 .servicios{
@@ -234,16 +238,14 @@ input[type="submit"]:hover {
   height: auto;
 }
 
-.Preguntas{
-  height: 1000px;
-  padding: 7vh 20%;
-}
 
 footer {
+  height: 6vh;
+  display: flex;
   background-color: #333;
   color: #fff;
-  padding: 4vh;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   margin: 0;
 }
 
